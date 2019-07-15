@@ -9,16 +9,14 @@ public class Food {
     private String uuid;
     private String name;
     private NutritionFacts nutritionFacts;
-    private String tag;
-    private String tag2;
+    private String[] tags;
 
     // Constructor
-    public Food(String name, NutritionFacts nutritionFacts, String tag, String tag2) {
+    public Food(String name, NutritionFacts nutritionFacts, String[] tags) {
         this.uuid = UUID.randomUUID().toString();
         this.name = name;
         this.nutritionFacts = nutritionFacts;
-        this.tag = tag;
-        this.tag2 = tag2;
+        this.tags = tags;
     }
 
     // Getter methods
@@ -34,12 +32,8 @@ public class Food {
         return nutritionFacts;
     }
 
-    public String getTag() {
-        return tag;
-    }
-
-    public String getTag2() {
-        return tag2;
+    public String[] getTags() {
+        return tags;
     }
 
     // Setter methods
@@ -55,11 +49,7 @@ public class Food {
         this.nutritionFacts = nutritionFacts;
     }
 
-    public void setTag(String tag) {
-        this.tag = tag;
-    }
-
-    public void setTag2(String tag2) {
-        this.tag = tag2;
+    public void setTags(String[] tag) {
+        this.tags = tags;
     }
 }

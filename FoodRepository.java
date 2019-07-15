@@ -16,16 +16,24 @@ public class FoodRepository {
 
         //Food Objects
         NutritionFacts cokeNutritionFacts = new NutritionFacts(190, 0, 60, 54, 54, 0);
-        Food coke = new Food("Coca-Cola", cokeNutritionFacts, "Drink", "Coca-Cola");
+        String[] cokeTags = {"Drink", "Cola", "Coca-Cola"};
+        Food coke = new Food("Coca-Cola", cokeNutritionFacts, cokeTags);
         foods.put(coke.getUUID(), coke);
 
         NutritionFacts drpepperNutritionFacts = new NutritionFacts(180, 0, 75, 48, 47, 0);
-        Food drpepper = new Food( "Dr Pepper", drpepperNutritionFacts, "Drink", "Dr Pepper");
+        String[] drpepperTags = {"Drink", "Cola", "Dr Pepper"};
+        Food drpepper = new Food( "Dr Pepper", drpepperNutritionFacts, drpepperTags);
         foods.put(drpepper.getUUID(), drpepper);
 
-        NutritionFacts cfaSandwichNutritionFacts = new NutritionFacts(180, 0, 75, 48, 47, 0);
-        Food cfaSandwich = new Food( "Chick Fil A Chicken Sandwich", cfaSandwichNutritionFacts, "Entree", "Chick Fil A");
+        NutritionFacts cfaSandwichNutritionFacts = new NutritionFacts(440, 19, 1350, 40, 5, 28);
+        String[] cfaSandwichTags = {"Entree", "Sandwich", "Dinner", "Lunch", "Chick Fil A"};
+        Food cfaSandwich = new Food( "Chick Fil A Chicken Sandwich", cfaSandwichNutritionFacts, cfaSandwichTags);
         foods.put(cfaSandwich.getUUID(), cfaSandwich);
+
+        NutritionFacts bigMacNutritionFacts = new NutritionFacts(540, 28, 940, 42, 9, 25);
+        String[] bigMacTags = {"Entree", "Burger", "Dinner", "Lunch", "McDonalds"};
+        Food bigMac = new Food( "McDonalds Big Mac", bigMacNutritionFacts, bigMacTags);
+        foods.put(bigMac.getUUID(), cfaSandwich);
 
         // Get a set of the entries
         Set set = foods.entrySet();
