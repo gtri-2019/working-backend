@@ -2,8 +2,10 @@ package com.example.myapplication;
 
 //This FoodRepository object contains a hash map of food items
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
 
 public class FoodRepository {
@@ -37,6 +39,24 @@ public class FoodRepository {
 
         // Get a set of the entries
         Set foodSet = foods.entrySet();
+        /*
+        // other/test
+        int caloriesConsumed = 0;
+        String searchValue = scan.nextString();
+        boolean flag = Arrays.asList(foods.get(key).tags).contains(searchValue);
+        if(flag == true) {
+            caloriesConsumed = (caloriesConsumed + foods.get(key).xxx);
+        }
+            //code to display calories left -> 2000-caloriesConsumed
+
+        // other/test 2
+        String needle = "burger"
+        for(Map.Entry<String, Food> entry : foods.entrySet()) {
+            Food v = entry.getValue();
+            if(v.contains(needle))
+                caloriesConsumed = (caloriesConsumed + xxx);
+        }
+        */
     }
 
     // Getter methods
