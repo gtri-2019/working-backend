@@ -1,6 +1,6 @@
 package com.example.myapplication;
 
-//This FoodRepository object contains a hashmap of food items
+//This FoodRepository object contains a hash map of food items
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -36,10 +36,7 @@ public class FoodRepository {
         foods.put(bigMac.getUUID(), cfaSandwich);
 
         // Get a set of the entries
-        Set set = foods.entrySet();
-
-        // Get an iterator
-        Iterator i = set.iterator();
+        Set foodSet = foods.entrySet();
     }
 
     // Getter methods
