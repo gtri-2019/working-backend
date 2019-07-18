@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 //This Food object contains a unique identifier, nutrition facts, and searchable tags.
 
+import java.util.List;
 import java.util.UUID;
 
 public class Food {
@@ -9,10 +10,10 @@ public class Food {
     private String uuid;
     private String name;
     private NutritionFacts nutritionFacts;
-    private String[] tags;
+    private List<String> tags;
 
     // Constructor
-    public Food(String name, NutritionFacts nutritionFacts, String[] tags) {
+    public Food(String name, NutritionFacts nutritionFacts, List<String> tags) {
         this.uuid = UUID.randomUUID().toString();
         this.name = name;
         this.nutritionFacts = nutritionFacts;
@@ -32,7 +33,7 @@ public class Food {
         return nutritionFacts;
     }
 
-    public String[] getTags() {
+    public List<String> getTags() {
         return tags;
     }
 
@@ -49,7 +50,7 @@ public class Food {
         this.nutritionFacts = nutritionFacts;
     }
 
-    public void setTags(String[] tag) {
+    public void setTags(List<String> tags) {
         this.tags = tags;
     }
 }
