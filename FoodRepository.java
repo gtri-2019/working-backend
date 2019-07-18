@@ -36,19 +36,19 @@ public class FoodRepository {
         NutritionFacts bigMacNutritionFacts = new NutritionFacts(540, 28, 940, 42, 9, 25);
         List<String> bigMacTags = Arrays.asList("Entree", "Burger", "Dinner", "Lunch", "McDonalds");
         Food bigMac = new Food( "McDonalds Big Mac", bigMacNutritionFacts, bigMacTags);
-        foods.put(bigMac.getUUID(), cfaSandwich);
+        foods.put(bigMac.getUUID(), bigMac);
 
         // Get a set of the entries
         Set foodSet = foods.entrySet();
 
-        /*
+/*
         // test
         int caloriesConsumed = 0;
-        String needle = "burger"
+        String searchValue = "burger"
         for(Map.Entry<String, Food> entry : foods.entrySet()) {
             Food v = entry.getValue();
-            if(v.getTags().contains(needle))
-                caloriesConsumed = (caloriesConsumed + v.getNutritionFacts(calories));
+            if(v.getTags().contains(searchValue))
+                caloriesConsumed = (caloriesConsumed + v.getNutritionFacts().getCalories());
         }
 
         */
