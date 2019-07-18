@@ -4,7 +4,6 @@ package com.example.myapplication;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -16,8 +15,6 @@ public class FoodRepository {
 
     // Constructor
     public FoodRepository () {
-
-        //this.foods = foods;
 
         //Food Objects
         NutritionFacts cokeNutritionFacts = new NutritionFacts(190, 0, 60, 54, 54, 0);
@@ -39,10 +36,6 @@ public class FoodRepository {
         List<String> bigMacTags = Arrays.asList("Entree", "Burger", "Dinner", "Lunch", "McDonalds");
         Food bigMac = new Food( "McDonalds Big Mac", bigMacNutritionFacts, bigMacTags);
         foods.put(bigMac.getUUID(), bigMac);
-
-        // Get a set of the entries
-            //Set foodSet = foods.entrySet();
-
 
         // test
         int caloriesConsumed = 0;
