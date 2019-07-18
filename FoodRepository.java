@@ -12,10 +12,12 @@ import java.util.Set;
 public class FoodRepository {
 
     // Create a hash map
-    private HashMap foods = new HashMap();
+    private Map<String, Food> foods = new HashMap<>();
 
     // Constructor
     public FoodRepository () {
+
+        //this.foods = foods;
 
         //Food Objects
         NutritionFacts cokeNutritionFacts = new NutritionFacts(190, 0, 60, 54, 54, 0);
@@ -39,28 +41,28 @@ public class FoodRepository {
         foods.put(bigMac.getUUID(), bigMac);
 
         // Get a set of the entries
-        Set foodSet = foods.entrySet();
+            //Set foodSet = foods.entrySet();
 
-/*
+
         // test
         int caloriesConsumed = 0;
-        String searchValue = "burger"
+        String searchValue = "burger";
         for(Map.Entry<String, Food> entry : foods.entrySet()) {
             Food v = entry.getValue();
             if(v.getTags().contains(searchValue))
                 caloriesConsumed = (caloriesConsumed + v.getNutritionFacts().getCalories());
         }
 
-        */
+
     }
 
     // Getter methods
-    public HashMap getFoods() {
+    public Map<String, Food> getFoods() {
         return foods;
     }
 
     // Setter methods
-    public void setFoods(HashMap foods) {
+    public void setFoods(Map<String, Food> foods) {
         this.foods = foods;
     }
 }
