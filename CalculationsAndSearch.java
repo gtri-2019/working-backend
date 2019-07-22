@@ -2,10 +2,9 @@ package com.example.myapplication;
 
 //This Food object contains a unique identifier, nutrition facts, and searchable tags.
 
-import java.util.HashMap;
 import java.util.Map;
 
-public class CalculationsAndSearch {
+class CalculationsAndSearch {
 
     // Class variables
     private int caloriesConsumed;
@@ -14,9 +13,10 @@ public class CalculationsAndSearch {
     private int carbsConsumed;
     private int sugarConsumed;
     private int proteinConsumed;
+    private Food display;
 
     // Constructor
-    public CalculationsAndSearch(int caloriesConsumed, int fatConsumed, int sodiumConsumed, int carbsConsumed, int sugarConsumed, int proteinConsumed) {
+    CalculationsAndSearch(int caloriesConsumed, int fatConsumed, int sodiumConsumed, int carbsConsumed, int sugarConsumed, int proteinConsumed, Food display) {
 
         this.caloriesConsumed = caloriesConsumed;
         this.fatConsumed = fatConsumed;
@@ -24,71 +24,90 @@ public class CalculationsAndSearch {
         this.carbsConsumed = carbsConsumed;
         this.sugarConsumed = sugarConsumed;
         this.proteinConsumed = proteinConsumed;
+        this.display = display;
 
         FoodRepository items = new FoodRepository();
         Map<String, Food> foods = items.getFoods();
 
+        //something to set value from user input
         String searchValue = "burger";
+
         for(Map.Entry<String, Food> entry : foods.entrySet()) {
             Food v = entry.getValue();
             if(v.getTags().contains(searchValue)) {
-                caloriesConsumed = (caloriesConsumed + v.getNutritionFacts().getCalories());
-                fatConsumed = (fatConsumed + v.getNutritionFacts().getFat());
-                sodiumConsumed = (sodiumConsumed + v.getNutritionFacts().getSodium());
-                carbsConsumed = (carbsConsumed + v.getNutritionFacts().getCarbs());
-                sugarConsumed = (sugarConsumed + v.getNutritionFacts().getSugar());
-                proteinConsumed = (proteinConsumed + v.getNutritionFacts().getProtein());
+
+                //something to display to list
+                display = v;
+
             }
         }
+
+        //something about choosing item
+
+        caloriesConsumed = (caloriesConsumed + display.getNutritionFacts().getCalories());
+        fatConsumed = (fatConsumed + display.getNutritionFacts().getFat());
+        sodiumConsumed = (sodiumConsumed + display.getNutritionFacts().getSodium());
+        carbsConsumed = (carbsConsumed + display.getNutritionFacts().getCarbs());
+        sugarConsumed = (sugarConsumed + display.getNutritionFacts().getSugar());
+        proteinConsumed = (proteinConsumed + display.getNutritionFacts().getProtein());
+
     }
 
     // Getter methods
-    public int getCaloriesConsumed() {
+    int getCaloriesConsumed() {
         return caloriesConsumed;
     }
 
-    public int getFatConsumed() {
+    int getFatConsumed() {
         return fatConsumed;
     }
 
-    public int getSodiumConsumed() {
+    int getSodiumConsumed() {
         return sodiumConsumed;
     }
 
-    public int getCarbsConsumed() {
+    int getCarbsConsumed() {
         return carbsConsumed;
     }
 
-    public int getSugarConsumed() {
+    int getSugarConsumed() {
         return sugarConsumed;
     }
 
-    public int getProteinConsumed() {
+    int getProteinConsumed() {
         return proteinConsumed;
     }
 
+    Food getDisplay() {
+        return display;
+    }
+
     // Setter methods
-    public void setCaloriesConsumed(int caloriesConsumed) {
+    void setCaloriesConsumed(int caloriesConsumed) {
         this.caloriesConsumed = caloriesConsumed;
     }
 
-    public void setFatConsumed(int fatConsumed) {
+    void setFatConsumed(int fatConsumed) {
         this.fatConsumed = fatConsumed;
     }
 
-    public void setSodiumConsumed(int sodiumConsumed) {
+    void setSodiumConsumed(int sodiumConsumed) {
         this.sodiumConsumed = sodiumConsumed;
     }
 
-    public void setCarbs(int carbsConsumed) {
+    void setCarbs(int carbsConsumed) {
         this.carbsConsumed = carbsConsumed;
     }
 
-    public void setSugarConsumed(int sugarConsumed) {
+    void setSugarConsumed(int sugarConsumed) {
         this.sugarConsumed = sugarConsumed;
     }
 
-    public void setProteinConsumed(int proteinConsumed) {
+    void setProteinConsumed(int proteinConsumed) {
         this.proteinConsumed = proteinConsumed;
+    }
+
+    void setDisplay(Food display) {
+        this.display = display;
     }
 }
