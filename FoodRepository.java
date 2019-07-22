@@ -6,7 +6,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class FoodRepository {
 
@@ -36,17 +35,6 @@ public class FoodRepository {
         List<String> bigMacTags = Arrays.asList("Entree", "Burger", "Dinner", "Lunch", "McDonalds");
         Food bigMac = new Food( "McDonalds Big Mac", bigMacNutritionFacts, bigMacTags);
         foods.put(bigMac.getUUID(), bigMac);
-
-        // test
-        int caloriesConsumed = 0;
-        String searchValue = "burger";
-        for(Map.Entry<String, Food> entry : foods.entrySet()) {
-            Food v = entry.getValue();
-            if(v.getTags().contains(searchValue))
-                caloriesConsumed = (caloriesConsumed + v.getNutritionFacts().getCalories());
-        }
-
-
     }
 
     // Getter methods
