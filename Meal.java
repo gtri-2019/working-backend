@@ -5,7 +5,7 @@ package com.example.myapplication;
 import java.util.UUID;
 import java.sql.Timestamp;
 
-public class Meal {
+class Meal {
     // Class variables
     private String uuid;
     private String name;
@@ -13,7 +13,7 @@ public class Meal {
     private String timestamp;
 
     // Constructor
-    public Meal(String uuid, String name, NutritionFacts totalNutritionFacts, String timestamp) {
+    Meal(String uuid, String name, NutritionFacts totalNutritionFacts, String timestamp) {
         this.uuid = UUID.randomUUID().toString();
         this.name = name;
         this.totalNutritionFacts = totalNutritionFacts;
@@ -21,36 +21,36 @@ public class Meal {
     }
 
     // Getter methods
-    public String getUUID() {
+    String getUUID() {
         return uuid;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public NutritionFacts getNutritionFacts() {
+    NutritionFacts getNutritionFacts() {
         return totalNutritionFacts;
     }
 
-    public String getTimestamp() {
+    String getTimestamp() {
         return timestamp;
     }
 
     // Setter methods
-    public void setUUID(String uuid) {
+    void setUUID(String uuid) {
         this.uuid = uuid;
     }
 
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    public void setNutritionFacts(NutritionFacts totalNutritionFacts) {
+    void setNutritionFacts(NutritionFacts totalNutritionFacts) {
         this.totalNutritionFacts = totalNutritionFacts;
     }
 
-    public void setTimestamp(String timestamp) {
+    void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 }

@@ -4,7 +4,7 @@ package com.example.myapplication;
 
 import java.util.UUID;
 
-public class User {
+class User {
 
     // Class variables
     private String uuid;
@@ -19,7 +19,7 @@ public class User {
     */
 
     // Constructor
-    public User(String uuid, String name, boolean notifications) {
+    User(String uuid, String name, boolean notifications) {
         this.uuid = UUID.randomUUID().toString();
         this.name = name;
         this.notifications = notifications;
@@ -27,28 +27,28 @@ public class User {
     }
 
     // Getter methods
-    public String getUUID() {
+    String getUUID() {
         return uuid;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public boolean getNotifications(){
+    boolean getNotifications(){
         return notifications;
     }
 
     // Setter methods
-    public void setUUID(String uuid) {
+    void setUUID(String uuid) {
         this.uuid = uuid;
     }
 
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    public void setNotifications(boolean notifications){
+    void setNotifications(boolean notifications){
         this.notifications = notifications;
     }
 
