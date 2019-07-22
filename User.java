@@ -1,6 +1,6 @@
 package com.example.myapplication;
 
-//This User object contains variables and a unique identifier
+//This User object contains variables and a unique identifier. -- OUT OF USE
 
 import java.util.UUID;
 
