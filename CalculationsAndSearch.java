@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 //This Food object contains a unique identifier, nutrition facts, and searchable tags.
 
+import java.util.ArrayList;
 import java.util.Map;
 
 class CalculationsAndSearch {
@@ -13,10 +14,11 @@ class CalculationsAndSearch {
     private int carbsConsumed;
     private int sugarConsumed;
     private int proteinConsumed;
-    private Food display;
+    private ArrayList<Food> matching;
+
 
     // Constructor
-    CalculationsAndSearch(int caloriesConsumed, int fatConsumed, int sodiumConsumed, int carbsConsumed, int sugarConsumed, int proteinConsumed, Food display) {
+    CalculationsAndSearch(int caloriesConsumed, int fatConsumed, int sodiumConsumed, int carbsConsumed, int sugarConsumed, int proteinConsumed, ArrayList<Food> matching) {
 
         this.caloriesConsumed = caloriesConsumed;
         this.fatConsumed = fatConsumed;
@@ -24,7 +26,7 @@ class CalculationsAndSearch {
         this.carbsConsumed = carbsConsumed;
         this.sugarConsumed = sugarConsumed;
         this.proteinConsumed = proteinConsumed;
-        this.display = display;
+        this.matching = matching;
 
         FoodRepository items = new FoodRepository();
         Map<String, Food> foods = items.getFoods();
@@ -35,14 +37,12 @@ class CalculationsAndSearch {
         for(Map.Entry<String, Food> entry : foods.entrySet()) {
             Food v = entry.getValue();
             if(v.getTags().contains(searchValue)) {
-
-                //something to display to list
-                display = v;
-
+                matching.add(v);
             }
         }
 
         //something about choosing item
+        Food display = matching.get(0);
 
         caloriesConsumed = (caloriesConsumed + display.getNutritionFacts().getCalories());
         fatConsumed = (fatConsumed + display.getNutritionFacts().getFat());
@@ -78,8 +78,8 @@ class CalculationsAndSearch {
         return proteinConsumed;
     }
 
-    Food getDisplay() {
-        return display;
+    ArrayList<Food> getMatching() {
+        return matching;
     }
 
     // Setter methods
@@ -107,7 +107,7 @@ class CalculationsAndSearch {
         this.proteinConsumed = proteinConsumed;
     }
 
-    void setDisplay(Food display) {
-        this.display = display;
+    void setMatching(ArrayList<Food> matching) {
+        this.matching = matching;
     }
 }
