@@ -4,7 +4,7 @@ package com.example.myapplication;
 
 import java.util.UUID;
 
-public class FoodGroup {
+class FoodGroup {
 
     // Class variables
     private String uuid;
@@ -13,7 +13,7 @@ public class FoodGroup {
     private String tag;
 
     // Constructor
-    public FoodGroup(String uuid, String name, NutritionFacts nutritionFacts, String tag) {
+    FoodGroup(String uuid, String name, NutritionFacts nutritionFacts, String tag) {
         this.uuid = UUID.randomUUID().toString();
         this.name = name;
         this.nutritionFacts = nutritionFacts;
@@ -21,28 +21,28 @@ public class FoodGroup {
     }
 
     // Getter methods
-    public String getUUID() {
+    String getUUID() {
         return uuid;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public String getTag() {
+    String getTag() {
         return tag;
     }
 
     // Setter methods
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    public void setUUID(String uuid) {
+    void setUUID(String uuid) {
         this.uuid = uuid;
     }
 
-    public void setTag(String tag) {
+    void setTag(String tag) {
         this.tag = tag;
     }
 }

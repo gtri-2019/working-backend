@@ -2,7 +2,7 @@ package com.example.myapplication;
 
 //This NutritionFacts object contains a set of variables.
 
-public class NutritionFacts {
+class NutritionFacts {
     // Class Variables
     private int calories;
     private int fat;
@@ -17,7 +17,7 @@ public class NutritionFacts {
     //private int VitaminC;
 
     //Constructor
-    public NutritionFacts(int calories, int fat, int sodium, int carbs, int sugar, int protein){
+    NutritionFacts(int calories, int fat, int sodium, int carbs, int sugar, int protein){
         this.calories = calories;
         this.fat = fat;
         this.sodium = sodium;
@@ -27,52 +27,52 @@ public class NutritionFacts {
     }
 
     // Getter methods
-    public int getCalories() {
+    int getCalories() {
         return calories;
     }
 
-    public int getFat() {
+    int getFat() {
         return fat;
     }
 
-    public int getSodium() {
+    int getSodium() {
         return sodium;
     }
 
-    public int getCarbs() {
+    int getCarbs() {
         return carbs;
     }
 
-    public int getSugar() {
+    int getSugar() {
         return sugar;
     }
 
-    public int getProtein() {
+    int getProtein() {
         return protein;
     }
 
     // Setter methods
-    public void setCalories(int calories) {
+    void setCalories(int calories) {
         this.calories = calories;
     }
 
-    public void setFat(int fat) {
+    void setFat(int fat) {
         this.fat = fat;
     }
 
-    public void setSodium(int sodium) {
+    void setSodium(int sodium) {
         this.sodium = sodium;
     }
 
-    public void setCarbs(int carbs) {
+    void setCarbs(int carbs) {
         this.carbs = carbs;
     }
 
-    public void setSugar(int sugar) {
+    void setSugar(int sugar) {
         this.sugar = sugar;
     }
 
-    public void setProtein(int protein) {
+    void setProtein(int protein) {
         this.protein = protein;
     }
 }
