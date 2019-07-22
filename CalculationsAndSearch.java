@@ -2,7 +2,7 @@ package com.example.myapplication;
 
 //This Food object contains a unique identifier, nutrition facts, and searchable tags.
 
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 
 public class CalculationsAndSearch {
@@ -24,6 +24,9 @@ public class CalculationsAndSearch {
         this.carbsConsumed = carbsConsumed;
         this.sugarConsumed = sugarConsumed;
         this.proteinConsumed = proteinConsumed;
+
+        FoodRepository items = new FoodRepository();
+        Map<String, Food> foods = items.getFoods();
 
         String searchValue = "burger";
         for(Map.Entry<String, Food> entry : foods.entrySet()) {
