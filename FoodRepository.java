@@ -35,6 +35,16 @@ public class FoodRepository {
         List<String> bigMacTags = Arrays.asList("Entree", "Burger", "Dinner", "Lunch", "McDonalds");
         Food bigMac = new Food( "McDonalds Big Mac", bigMacNutritionFacts, bigMacTags);
         foods.put(bigMac.getUUID(), bigMac);
+
+        NutritionFacts waffleNutritionFacts = new NutritionFacts(590, 29, 740, 69, 17, 11);
+        List<String> waffleTags = Arrays.asList("Entree", "Waffle", "Dinner", "Lunch", "Breakfast", "IHOP");
+        Food waffle = new Food( "IHOP Belgian Waffle", waffleNutritionFacts, waffleTags);
+        foods.put(waffle.getUUID(), waffle);
+
+        NutritionFacts laysClassicNutritionFacts = new NutritionFacts(160, 10, 170, 15, 0, 2);
+        List<String> laysClassicTags = Arrays.asList("Side", "Chips", "Dinner", "Lunch", "Snack", "Lay's");
+        Food laysClassic = new Food( "Lay's Classic Potato Chips", laysClassicNutritionFacts, laysClassicTags);
+        foods.put(laysClassic.getUUID(), laysClassic);
     }
 
     // Getter methods
