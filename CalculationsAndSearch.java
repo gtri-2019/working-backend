@@ -1,6 +1,6 @@
 package com.example.myapplication;
 
-//This Food object contains a unique identifier, nutrition facts, and searchable tags.
+//This calculations ad search object contains a value checker and a array list.
 
 import java.util.ArrayList;
 import java.util.Map;
