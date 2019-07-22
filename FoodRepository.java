@@ -7,13 +7,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FoodRepository {
+class FoodRepository {
 
     // Create a hash map
     private Map<String, Food> foods = new HashMap<>();
 
     // Constructor
-    public FoodRepository () {
+    FoodRepository() {
 
         //Food Objects
         NutritionFacts cokeNutritionFacts = new NutritionFacts(190, 0, 60, 54, 54, 0);
@@ -48,12 +48,12 @@ public class FoodRepository {
     }
 
     // Getter methods
-    public Map<String, Food> getFoods() {
+    Map<String, Food> getFoods() {
         return foods;
     }
 
     // Setter methods
-    public void setFoods(Map<String, Food> foods) {
+    void setFoods(Map<String, Food> foods) {
         this.foods = foods;
     }
 }

@@ -5,7 +5,7 @@ package com.example.myapplication;
 import java.util.List;
 import java.util.UUID;
 
-public class Food {
+class Food {
     // Class variables
     private String uuid;
     private String name;
@@ -13,7 +13,7 @@ public class Food {
     private List<String> tags;
 
     // Constructor
-    public Food(String name, NutritionFacts nutritionFacts, List<String> tags) {
+    Food(String name, NutritionFacts nutritionFacts, List<String> tags) {
         this.uuid = UUID.randomUUID().toString();
         this.name = name;
         this.nutritionFacts = nutritionFacts;
@@ -21,36 +21,36 @@ public class Food {
     }
 
     // Getter methods
-    public String getUUID() {
+    String getUUID() {
         return uuid;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public NutritionFacts getNutritionFacts() {
+    NutritionFacts getNutritionFacts() {
         return nutritionFacts;
     }
 
-    public List<String> getTags() {
+    List<String> getTags() {
         return tags;
     }
 
     // Setter methods
-    public void setUUID(String uuid) {
+    void setUUID(String uuid) {
         this.uuid = uuid;
     }
 
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    public void setNutritionFacts(NutritionFacts nutritionFacts) {
+    void setNutritionFacts(NutritionFacts nutritionFacts) {
         this.nutritionFacts = nutritionFacts;
     }
 
-    public void setTags(List<String> tags) {
+    void setTags(List<String> tags) {
         this.tags = tags;
     }
 }
