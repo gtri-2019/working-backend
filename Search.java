@@ -5,7 +5,7 @@ package com.example.myapplication;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class Search {
+class Search {
 
     // Class variables
     private ArrayList<Food> matching;
