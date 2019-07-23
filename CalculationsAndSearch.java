@@ -1,6 +1,6 @@
 package com.example.myapplication;
 
-//This calculations and search object contains a value checker and a array list with macro nutrient variables.
+//This calculations and search object contains a value checker and an array list with macro-nutrient variables. -- OUT OF USE
 
 import java.util.ArrayList;
 import java.util.Map;
