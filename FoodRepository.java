@@ -17,7 +17,7 @@ class FoodRepository {
 
         //Food Objects
         NutritionFacts cokeNutritionFacts = new NutritionFacts(190, 0, 60, 54, 54, 0);
-        List<String> cokeTags = Arrays.asList("Drink", "Cola", "Coca-Cola");
+        List<String> cokeTags = Arrays.asList("Drink", "Cola", "Coca-Cola", "Coke");
         Food coke = new Food("Coca-Cola", cokeNutritionFacts, cokeTags);
         foods.put(coke.getUUID(), coke);
 
@@ -27,12 +27,12 @@ class FoodRepository {
         foods.put(drpepper.getUUID(), drpepper);
 
         NutritionFacts cfaSandwichNutritionFacts = new NutritionFacts(440, 19, 1350, 40, 5, 28);
-        List<String> cfaSandwichTags = Arrays.asList("Entree", "Sandwich", "Dinner", "Lunch", "Chick Fil A");
+        List<String> cfaSandwichTags = Arrays.asList("Entree", "Sandwich", "Dinner", "Lunch", "Chick Fil A", "Chicken");
         Food cfaSandwich = new Food( "Chick Fil A Chicken Sandwich", cfaSandwichNutritionFacts, cfaSandwichTags);
         foods.put(cfaSandwich.getUUID(), cfaSandwich);
 
         NutritionFacts bigMacNutritionFacts = new NutritionFacts(540, 28, 940, 42, 9, 25);
-        List<String> bigMacTags = Arrays.asList("Entree", "Burger", "Dinner", "Lunch", "McDonalds");
+        List<String> bigMacTags = Arrays.asList("Entree", "Burger", "Dinner", "Lunch", "McDonalds", "Beef");
         Food bigMac = new Food( "McDonalds Big Mac", bigMacNutritionFacts, bigMacTags);
         foods.put(bigMac.getUUID(), bigMac);
 
@@ -42,7 +42,7 @@ class FoodRepository {
         foods.put(waffle.getUUID(), waffle);
 
         NutritionFacts laysClassicNutritionFacts = new NutritionFacts(160, 10, 170, 15, 0, 2);
-        List<String> laysClassicTags = Arrays.asList("Side", "Chips", "Dinner", "Lunch", "Snack", "Lay's");
+        List<String> laysClassicTags = Arrays.asList("Side", "Chips", "Dinner", "Lunch", "Snack", "Lay's", "Potato Chips");
         Food laysClassic = new Food( "Lay's Classic Potato Chips", laysClassicNutritionFacts, laysClassicTags);
         foods.put(laysClassic.getUUID(), laysClassic);
     }
