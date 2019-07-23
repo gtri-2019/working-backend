@@ -8,7 +8,7 @@ import android.widget.AutoCompleteTextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    String[] language ={
+    String[] tagOptions ={
             "Drink","Entree","Side","Burger","Sandwich","McDonalds","Chick Fil A","Chips","Lay's","Breakfast",
             "Lunch","Dinner","IHOP","Cola", "Coca-Cola", "Coke","Waffle","Snack","Dr Pepper","Chicken",
             "Beef","Potato Chips"
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Creating the instance of ArrayAdapter containing list of language names
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (this,android.R.layout.select_dialog_item,language);
+                (this,android.R.layout.select_dialog_item,tagOptions);
 
         //Getting the instance of AutoCompleteTextView
         AutoCompleteTextView actv =  (AutoCompleteTextView)findViewById(R.id.autoCompleteTextView);
