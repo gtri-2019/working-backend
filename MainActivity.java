@@ -9,9 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     String[] tagOptions ={
-            "Drink","Entree","Side","Burger","Sandwich","McDonalds","Chick Fil A","Chips","Lay's","Breakfast",
-            "Lunch","Dinner","IHOP","Cola", "Coca-Cola", "Coke","Waffle","Snack","Dr Pepper","Chicken",
-            "Beef","Potato Chips"
+            "Drink","Entree","Side","Burger","Sandwich","McDonalds","Chick Fil A","Fast Food","Lay's","Breakfast",
+            "Lunch","Dinner","Panda Express","Cola", "Coca-Cola", "Coke","Waffle","Snack","Dr Pepper","Chicken",
+            "Beef","Potato Chips","Potato","Fries","French Fries","Italian","Chinese","Pizza","Pepperoni Pizza","IHOP",
+            "Orange Chicken","Asian","Pepperoni","Meatballs","Pasta","Chips"
     };
 
     @Override
