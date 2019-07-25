@@ -10,6 +10,7 @@ class NutritionFacts {
     private int carbs;
     private int sugar;
     private int protein;
+    private String servingSize;
 
     //private int iron;
     //private int calcium;
@@ -17,13 +18,14 @@ class NutritionFacts {
     //private int VitaminC;
 
     //Constructor
-    NutritionFacts(int calories, int fat, int sodium, int carbs, int sugar, int protein){
+    NutritionFacts(int calories, int fat, int sodium, int carbs, int sugar, int protein, String servingSize){
         this.calories = calories;
         this.fat = fat;
         this.sodium = sodium;
         this.carbs = carbs;
         this.sugar = sugar;
         this.protein = protein;
+        this.servingSize = servingSize;
     }
 
     // Getter methods
@@ -51,6 +53,10 @@ class NutritionFacts {
         return protein;
     }
 
+    String getServingSize() {
+        return servingSize;
+    }
+
     // Setter methods
     void setCalories(int calories) {
         this.calories = calories;
@@ -74,5 +80,9 @@ class NutritionFacts {
 
     void setProtein(int protein) {
         this.protein = protein;
+    }
+
+    void setServingSize(String servingSize) {
+        this.servingSize = servingSize;
     }
 }
