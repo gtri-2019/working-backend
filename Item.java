@@ -3,11 +3,11 @@ package com.example.myapplication;
 class Item {
 
     private String foodName;
-    private String foodCalories;
+    private int foodCalories;
     private String foodServingSize;
     private int foodImage;
 
-    Item(String foodName, String foodCalories, String foodServingSize, int foodImage)
+    Item(String foodName, int foodCalories, String foodServingSize, int foodImage)
     {
         this.foodName = foodName;
         this.foodCalories = foodCalories;
@@ -21,7 +21,7 @@ class Item {
         return foodName;
     }
 
-    public String getFoodCalories()
+    public int getFoodCalories()
     {
         return foodCalories;
     }
@@ -41,7 +41,7 @@ class Item {
         this.foodName = foodName;
     }
 
-    void setFoodCalories(String foodCalories) {
+    void setFoodCalories(int foodCalories) {
         this.foodCalories = foodCalories;
     }
 
