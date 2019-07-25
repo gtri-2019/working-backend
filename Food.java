@@ -11,13 +11,15 @@ class Food {
     private String name;
     private NutritionFacts nutritionFacts;
     private List<String> tags;
+    private int image;
 
     // Constructor
-    Food(String name, NutritionFacts nutritionFacts, List<String> tags) {
+    Food(String name, NutritionFacts nutritionFacts, List<String> tags, int image) {
         this.uuid = UUID.randomUUID().toString();
         this.name = name;
         this.nutritionFacts = nutritionFacts;
         this.tags = tags;
+        this.image = image;
     }
 
     // Getter methods
@@ -37,6 +39,10 @@ class Food {
         return tags;
     }
 
+    int getImage() {
+        return image;
+    }
+
     // Setter methods
     void setUUID(String uuid) {
         this.uuid = uuid;
@@ -52,5 +58,9 @@ class Food {
 
     void setTags(List<String> tags) {
         this.tags = tags;
+    }
+
+    void setImage(int image) {
+        this.image = image;
     }
 }
