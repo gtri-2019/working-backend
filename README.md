@@ -1,7 +1,6 @@
-# GTRI-2019
-A Slice of Nutrition Pie
+# Working Backend
+STEM @ GTRI 2019 Internship Program, A Slice of Nutrition Pie
 
-This is the code for 2019 STEM at GTRI internship group.
-The code is for a nutrition information tracking app.
+This is the backend code for a nutrition information tracking app. These are the working versions updated frequently.
 
 Icons made by www.freepik.com  from www.flaticon.com
