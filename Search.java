@@ -12,10 +12,12 @@ import java.util.Map;
 class Search {
 
     // Class variables
-    private ArrayList<Food> matchingList;
+
+    /*private ArrayList<Food> matchingList;
     private ArrayList<String> namesList;
     private ArrayList caloriesList;
-    private ArrayList<String> servingSizeList;
+    private ArrayList<String> servingSizeList;*/
+
     private ListView simpleList;
     private ArrayList<Item> foodList;
 
@@ -23,10 +25,11 @@ class Search {
     // Constructor
     Search( ArrayList<Food> matchingList, ArrayList<String> namesList, ArrayList caloriesList, ArrayList<String> servingSizeList, ListView simpleList, ArrayList<Item> foodList) {
 
-        this.matchingList = matchingList;
+        /*this.matchingList = matchingList;
         this.namesList = namesList;
         this.caloriesList = caloriesList;
-        this.servingSizeList = servingSizeList;
+        this.servingSizeList = servingSizeList;*/
+
         this.simpleList = simpleList;
         this.foodList = foodList;
 
@@ -41,21 +44,21 @@ class Search {
         for(Map.Entry<String, Food> entry : foods.entrySet()) {
             Food f = entry.getValue();
             if(f.getTags().contains(searchValue)) {
-//                matchingList.add(f);
-//                namesList.add(f.getName());
-//                caloriesList.add(f.getNutritionFacts().getCalories());
-//                servingSizeList.add(f.getNutritionFacts().getServingSize());
+                /*matchingList.add(f);
+                namesList.add(f.getName());
+                caloriesList.add(f.getNutritionFacts().getCalories());
+                servingSizeList.add(f.getNutritionFacts().getServingSize());*/
 
                 foodList.add(new Item(f.getName(), f.getNutritionFacts().getCalories(), f.getNutritionFacts().getServingSize(), f.getImage()));
             }
         }
 
-        Adapter myAdapter = new myAdapter(this,R.layout.list_view_items,foodList);
+        Adapter myAdapter = new Adapter(this,R.layout.list_view_items,foodList);
         simpleList.setAdapter(myAdapter);
     }
 
     // Getter methods
-    ArrayList<Food> getMatchingList() {
+    /*ArrayList<Food> getMatchingList() {
         return matchingList;
     }
 
@@ -69,7 +72,7 @@ class Search {
 
     ArrayList<String> getServingSizeList() {
         return servingSizeList;
-    }
+    }*/
 
     ListView getSimpleList(){
         return simpleList;
@@ -80,7 +83,7 @@ class Search {
     }
 
     // Setter methods
-    void setMatchingList(ArrayList<Food> matchingList) {
+    /*void setMatchingList(ArrayList<Food> matchingList) {
         this.matchingList = matchingList;
     }
 
@@ -94,7 +97,7 @@ class Search {
 
     void setServingSizeList (ArrayList<String> servingSizeList) {
         this.servingSizeList = servingSizeList;
-    }
+    }*/
 
     void setSimpleList() {
         this.simpleList = simpleList;
